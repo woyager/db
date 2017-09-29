@@ -15,8 +15,11 @@ env:
   - GCE_CREDENTIALS_FILE=/home/travis/build/woyager/db/infra-a468d1fdb35c.json
 before_install:
 - pwd
+- ls
 - openssl aes-256-cbc -K $encrypted_aa31ba045a45_key -iv $encrypted_aa31ba045a45_iv
   -in secrets.tar.enc -out secrets.tar -d
+- pwd
+- ls
 notifications:
   slack:
     secure: W7OcfDqoaXsBq3bTwkVDQHX7Z566v63XFdJGO2QLOE2r7oXePsgIOhKmYHxPJFV2aZizybTPKVMq6pDRjJ/4Kx/XEEkgcuIW8FfgUFPtwpO9E6whLnP1Zk4MCWOOckJspheDD0+J5WYSG3YpzUskldYeRW4zapo/GtgD/YIRpa5IFULNfQWn/jClDMkmS2JCSPJzm6OzM5YPIadjbK7QbXHeLdN3k9lmHn9nOW0PaxAKVGyGFT2aadqzxCphaXfTAi9hsd/wO/g2aeHWxVj6mT50HY84jO5htHraXBIMn4EIRnr1ndOt1Op7cDoETIX3zw1ynK9ZA+ueCIPlFKsGWKn9+9EgU8y1YLbNpUIzWSNiEgLABJP1IngsTn/O35IM4aL3hrKPJaj0Ts62kEOT6iGkihCXn5eKa7yu6c7QDbQ2hdOOu+MGqJ2kquyUTVM7NaBJEhHt4ZqZgp3RalNPvWcr9PlF4Oz21ORvW/h87ITOv3zS8xLncFehx1zd4bN9D0HXVjJicicZsSfr/Ie6GLEQTAese+2ZZkdXfkwXNeV1MVNuTbZuPdIZv0Yg7Qb9n7HHRWpmj3tmii3QGcRchAD4RhRlQoELpF6r9j2W7TjDxhqqvKsaUUWhsBNGvfKm2iYHLuATE7vvDKD6Kx7bzz1QxtGrpjTKkTPPX9rtXWw=
