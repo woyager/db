@@ -2,4 +2,5 @@ extends: default
 
 ignore: |
   molecule/
+  .travis.yml
   meta/main.yml
