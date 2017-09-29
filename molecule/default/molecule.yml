@@ -16,7 +16,9 @@ provisioner:
     name: ansible-lint
     options:
       excludes:
-        molecule/
+        /home/travis/build/woyager/db/.travis.yml
+        /home/travis/build/woyager/db/molecule
+        /home/travis/build/woyager/db/meta
 scenario:
   name: default
 verifier:
