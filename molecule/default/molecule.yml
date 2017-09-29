@@ -14,14 +14,9 @@ provisioner:
   name: ansible
   lint:
     name: ansible-lint
-    options:
-      excludes:
-        /home/travis/build/woyager/db/.travis.yml
-        /home/travis/build/woyager/db/molecule
-        /home/travis/build/woyager/db/meta
 scenario:
   name: default
 verifier:
   name: testinfra
   lint:
-    name: flake8
+    name: ansible-lint
