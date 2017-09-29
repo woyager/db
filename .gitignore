@@ -13,3 +13,5 @@ __pycache__
 *.log
 *.pyc
 .cache
+secrets.tar
+google_compute_engine*
