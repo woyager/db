@@ -4,7 +4,7 @@ dependency:
 driver:
   name: gce
 lint:
-  name: yamllint
+  name: ansible-lint
 platforms:
   - name: instance-travis
     zone: europe-west1-b
@@ -18,3 +18,5 @@ scenario:
   name: default
 verifier:
   name: testinfra
+    lint:
+      name: flake8
