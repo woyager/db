@@ -9,6 +9,10 @@
     molecule_instance_config: "{{ lookup('env', 'MOLECULE_INSTANCE_CONFIG') }}"
     molecule_yml: "{{ lookup('file', molecule_file) | from_yaml }}"
   tasks:
+    - name: Find out playbooks path
+      shell: pwd
+      register: playbook_path_output
+    - debug: var=playbook_path_output.stdout
     - name: Destroy molecule instance(s)
       gce:
         instance_names: "{{ item.name }}"
